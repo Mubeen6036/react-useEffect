@@ -35,14 +35,16 @@ const Login = (props) => {
   //   return ()=>{console.log('Clean UP')};
   // },[enteredEmail]);
 
+  // const {};
+
   useEffect(()=>{
     const timer = setTimeout(setFormIsValid(
-      enteredEmail.includes('@') && enteredPassword.trim().length > 6
+      emailState.isValid && paswordState.isValid
     ), 500);
     return ()=>{
       clearTimeout(timer);
     }
-  }, [enteredPassword, enteredEmail]);
+  }, [emailState.isValid, paswordState.isValid]);
 
   const emailChangeHandler = (event) => {
     // setEnteredEmail(event.target.value);
