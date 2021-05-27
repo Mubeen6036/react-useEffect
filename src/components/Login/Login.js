@@ -55,7 +55,7 @@ const Login = (props) => {
   };
 
   const passwordChangeHandler = (event) => {
-    dispatchPassword({type:'paswordState', val:event.target.value});
+    dispatchPassword({type:'USER_INPUT', val:event.target.value});
     // setFormIsValid(
     //   emailState.value.includes('@') && event.target.value.trim().length > 6
     // )
